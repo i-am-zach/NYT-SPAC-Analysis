@@ -14994,7 +14994,9 @@ Cell <span class="ansi-green-fg">In[63], line 11</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Part-2:-Data-Formatting">Part 2: Data Formatting<a class="anchor-link" href="#Part-2:-Data-Formatting">&#182;</a></h1><h2 id="Combine-the-JSON-Files-to-one-dataframe-for-each-keyword">Combine the JSON Files to one dataframe for each keyword<a class="anchor-link" href="#Combine-the-JSON-Files-to-one-dataframe-for-each-keyword">&#182;</a></h2>
+<h1 id="Part-2:-Data-Formatting">Part 2: Data Formatting<a class="anchor-link" href="#Part-2:-Data-Formatting">&#182;</a></h1><h2 id="Combine-the-JSON-Files-to-one-dataframe-for-each-keyword">Combine the JSON Files to one dataframe for each keyword<a class="anchor-link" href="#Combine-the-JSON-Files-to-one-dataframe-for-each-keyword">&#182;</a></h2><p><img src="assets/start-line.jpeg" alt="Start Line"></p>
+<p><strong>NOTE:</strong> If you want to run this notebook without doing the tedious data collection, start here.</p>
+
 </div>
 </div>
 </div>
@@ -16159,8 +16161,10 @@ Cell <span class="ansi-green-fg">In[63], line 11</span>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/var/folders/x0/4wc1x1s934q1t58trc5dtw0h0000gp/T/ipykernel_22655/371600974.py:2: FutureWarning: Treating datetime data as categorical rather than numeric in `.describe` is deprecated and will be removed in a future version of pandas. Specify `datetime_is_numeric=True` to silence this warning and adopt the future behavior now.
-  full_df[&#39;pub_date&#39;].describe()
+<pre>/var/folders/x0/4wc1x1s934q1t58trc5dtw0h0000gp/T/ipykernel_22655/371600974.py:2: FutureWarning:
+
+Treating datetime data as categorical rather than numeric in `.describe` is deprecated and will be removed in a future version of pandas. Specify `datetime_is_numeric=True` to silence this warning and adopt the future behavior now.
+
 </pre>
 </div>
 </div>
@@ -16270,8 +16274,10 @@ Name: word_count, dtype: float64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/var/folders/x0/4wc1x1s934q1t58trc5dtw0h0000gp/T/ipykernel_22655/2377877904.py:2: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
-  px.histogram(full_df[&#39;pub_date&#39;], nbins=full_df[&#39;pub_date&#39;].dt.to_period(&#39;M&#39;).unique().shape[0])
+<pre>/var/folders/x0/4wc1x1s934q1t58trc5dtw0h0000gp/T/ipykernel_22655/2377877904.py:2: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
 </pre>
 </div>
 </div>
@@ -16578,6 +16584,10 @@ divide by zero encountered in log
 <p>Using LDA for this task helps us automatically discover the main topics discussed in these articles, providing a high-level overview of the common themes. By applying the LDA model, we can find out which topics were most prevalent over time, helping us understand how the discussion around SPACs has evolved.</p>
 <p>It can also highlight the context in which SPACs are being discussed, such as in relation to financial regulations, market trends, or specific industries. This information can be crucial in providing a more structured and deep understanding of the news corpus.</p>
 <p>In conclusion, LDA is a powerful tool for analyzing large collections of text data, uncovering hidden thematic structures, and helping in the understanding of large-scale trends and patterns. By using LDA in conjunction with Python's Scikit-Learn library, we can effectively analyze and interpret our corpus of New York Times articles.</p>
+<h3 id="Resources">Resources<a class="anchor-link" href="#Resources">&#182;</a></h3><ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html">Topic Modeling with LDA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation (LDA)</a></li>
+</ul>
 
 </div>
 </div>
@@ -16673,7 +16683,7 @@ divide by zero encountered in log
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<style>#sk-container-id-13 {color: black;background-color: white;}#sk-container-id-13 pre{padding: 0;}#sk-container-id-13 div.sk-toggleable {background-color: white;}#sk-container-id-13 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-13 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-13 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-13 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-13 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-13 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-13 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-13 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-13 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-13 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-13 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-13 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-13 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-13 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-13 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-13 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-13 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-13 div.sk-item {position: relative;z-index: 1;}#sk-container-id-13 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-13 div.sk-item::before, #sk-container-id-13 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-13 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-13 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-13 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-13 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-13 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-13 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-13 div.sk-label-container {text-align: center;}#sk-container-id-13 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-13 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-13" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LatentDirichletAllocation(random_state=42)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-13" type="checkbox" checked><label for="sk-estimator-id-13" class="sk-toggleable__label sk-toggleable__label-arrow">LatentDirichletAllocation</label><div class="sk-toggleable__content"><pre>LatentDirichletAllocation(random_state=42)</pre></div></div></div></div></div>
+<style>#sk-container-id-14 {color: black;background-color: white;}#sk-container-id-14 pre{padding: 0;}#sk-container-id-14 div.sk-toggleable {background-color: white;}#sk-container-id-14 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-14 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-14 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-14 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-14 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-14 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-14 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-14 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-14 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-14 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-14 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-14 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-14 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-14 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-14 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-14 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-14 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-14 div.sk-item {position: relative;z-index: 1;}#sk-container-id-14 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-14 div.sk-item::before, #sk-container-id-14 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-14 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-14 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-14 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-14 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-14 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-14 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-14 div.sk-label-container {text-align: center;}#sk-container-id-14 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-14 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-14" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LatentDirichletAllocation(random_state=42)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-14" type="checkbox" checked><label for="sk-estimator-id-14" class="sk-toggleable__label sk-toggleable__label-arrow">LatentDirichletAllocation</label><div class="sk-toggleable__content"><pre>LatentDirichletAllocation(random_state=42)</pre></div></div></div></div></div>
 </div>
 
 </div>
@@ -16706,8 +16716,7 @@ divide by zero encountered in log
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Compute the topic words only once</span>
-<span class="n">top_words</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Number of top words in each topic</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_words</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Number of top words in each topic</span>
 
 <span class="n">feature_names</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
 
@@ -16776,7 +16785,7 @@ divide by zero encountered in log
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(1710, 28)</pre>
+<pre>(1710, 25)</pre>
 </div>
 
 </div>
@@ -16793,7 +16802,7 @@ divide by zero encountered in log
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print a random sample of 5 articles and their main topics</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print a random sample of 5 articles and their main topic</span>
 <span class="k">for</span> <span class="n">abstract</span><span class="p">,</span> <span class="n">lead_paragraph</span><span class="p">,</span> <span class="n">main_topic_prob</span><span class="p">,</span> <span class="n">main_topic</span> <span class="ow">in</span> <span class="n">clean_df</span><span class="p">[[</span><span class="s1">'abstract'</span><span class="p">,</span> <span class="s1">'lead_paragraph'</span><span class="p">,</span> <span class="s1">'main_topic_prob'</span><span class="p">,</span> <span class="s1">'main_topic'</span><span class="p">]]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Abstract: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">abstract</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Lead Paragraph: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">lead_paragraph</span><span class="p">)</span>
@@ -16821,30 +16830,30 @@ divide by zero encountered in log
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Abstract: Tencent, one of China’s most powerful tech companies, is coming into the administration’s sights.
-Lead Paragraph:  Breaking: Johnson &amp; Johnson announced that it has begun Phase 3 clinical trials for its Covid-19 vaccine candidate, which it says may be available for emergency use early next year. 
-Main Topics: [&#39;bank&#39;, &#39;president&#39;, &#39;trump&#39;, &#39;media&#39;, &#39;social&#39;]
-Main Topic Probability: 0.9639915707337681
+<pre>Abstract: The Deal Professor examines the re-emergence of SPACs, as special purpose acquisition companies are known.
+Lead Paragraph: SPACs are in the news these days. These are special purpose acquisition companies formed solely to acquire other companies. SPACs constituted more than 20 percent of the initial public offering market in their heyday in 2007 when, according to SPAC Analytics, they raised more than $12 billion in 66 offerings. Remember, these almost all took place before August of that year, so it was quite a deluge. The reason why SPACs are back in the news is that they are on a literal death march. A typical SPAC must complete its acquisition within 18 months to 2 years, and so the last remaining survivors of the 2007 crop are fighting to stay alive. 
+Main Topics: [&#39;company&#39;, &#39;acquisition&#39;, &#39;deal&#39;, &#39;companies&#39;, &#39;said&#39;]
+Main Topic Probability: 0.7618993390284099
 
-Abstract: LEAD: CAN housing for lower-income people be saved by a law that forbids alterations or demolitions in the privately owned buildings they occupy?
-Lead Paragraph: CAN housing for lower-income people be saved by a law that forbids alterations or demolitions in the privately owned buildings they occupy?
+Abstract: The fashion company will merge with a SPAC, giving it cash to add to its empire.
+Lead Paragraph: In 1910, Ermenegildo Zegna was founded in the foothills of Northern Italy as a family-run maker of wool fabrics.
+Main Topics: [&#39;public&#39;, &#39;year&#39;, &#39;million&#39;, &#39;company&#39;, &#39;saratoga&#39;]
+Main Topic Probability: 0.7327148454001894
+
+Abstract: The Hagerty brand insures collectible autos — two million of them — and its articles and videos draw crowds. After going public, it has bigger plans.
+Lead Paragraph: For one Monday in early December, the New York Stock Exchange played the role of vintage car museum. At one end of Broad Street, outside the exchange, sat a high-roofed and stately 1921 Duesenberg coupe. At the other, a fearsome 1966 Ford GT40 racecar. Between them, encased in a glass vitrine, was an imperturbably cheery 1967 Porsche 911S.
 Main Topics: [&#39;text&#39;, &#39;wall&#39;, &#39;street&#39;, &#39;says&#39;, &#39;state&#39;]
-Main Topic Probability: 0.9590838704132678
+Main Topic Probability: 0.6563630106123653
 
-Abstract: LEAD: Craig Dill Capital L.P., a New York investment limited partnership, has acquired a 5.08 percent stake in Jan Bell Marketing Inc., the jewelry designer and manufacturer based in Sunrise, Fla., In a filing with the Securities and Exchange Commission, Craig said that it had purchased the Jan Bell shares for investment purposes only.
-Lead Paragraph: Craig Dill Capital L.P., a New York investment limited partnership, has acquired a 5.08 percent stake in Jan Bell Marketing Inc., the jewelry designer and manufacturer based in Sunrise, Fla., In a filing with the Securities and Exchange Commission, Craig said that it had purchased the Jan Bell shares for investment purposes only. The partnership acquired its Jan Bell shares on the open market for an average price of $14.16 a share. Shares of Jan Bell rose $1.75, to $23.25, in trading on the American Stock Exchange. At that price the company&#39;s current market value would be $448 million.
-Main Topics: [&#39;percent&#39;, &#39;company&#39;, &#39;said&#39;, &#39;shares&#39;, &#39;stake&#39;]
-Main Topic Probability: 0.9901084990242939
+Abstract: The former Fed chief is poised to return to government as Treasury secretary, with big challenges ahead.
+Lead Paragraph: After weeks of delay, the government formally authorized a transition of power to President-elect Joe Biden. But even before this step, businesses have shifted focus to the new administration, as Mr. Biden picked key members of his cabinet — including Janet Yellen as his Treasury secretary, which would make her the first woman in the role (after she was the first chairwoman of the Fed).
+Main Topics: [&#39;united&#39;, &#39;states&#39;, &#39;president&#39;, &#39;washington&#39;, &#39;today&#39;]
+Main Topic Probability: 0.5373683448209555
 
-Abstract: The multimillionaire Boaz Weinstein disclosed why he paid no or little taxes for several years.
-Lead Paragraph: Last week, ProPublica published an article about the tax records of Boaz Weinstein, the multimillionaire hedge fund manager famous for betting against the JPMorgan Chase trader known as the “London Whale.” The article reported that Mr. Weinstein and his wife, Tali Farhadian Weinstein, who is running for Manhattan district attorney and may inherit an investigation into Donald Trump’s New York State taxes, paid no or very little federal tax in “four of six recent years” between 2010 and 2018.
-Main Topics: [&#39;public&#39;, &#39;year&#39;, &#39;million&#39;, &#39;company&#39;, &#39;saratoga&#39;]
-Main Topic Probability: 0.49456051599466133
-
-Abstract: A new stock market high may seem strange when set against the human and economic devastation of the pandemic. Here’s how investors are justifying it.
-Lead Paragraph:  Stock market futures are up the day after the S&amp;P 500 set a record high, and Target just reported the strongest quarterly sales growth in its history. Investors are looking past the pandemic, for a variety of reasons, which we explain below. (Want this delivered to your inbox each day? Sign up here.)
-Main Topics: [&#39;public&#39;, &#39;year&#39;, &#39;million&#39;, &#39;company&#39;, &#39;saratoga&#39;]
-Main Topic Probability: 0.4948936919922155
+Abstract: LEAD: For years, many individuals have looked to the tax code for help in subsidizing some of their more costly personal possessions, such as luxury cars and home computers.
+Lead Paragraph: For years, many individuals have looked to the tax code for help in subsidizing some of their more costly personal possessions, such as luxury cars and home computers.
+Main Topics: [&#39;com&#39;, &#39;designer&#39;, &#39;style&#39;, &#39;slide&#39;, &#39;times&#39;]
+Main Topic Probability: 0.967849538276186
 
 </pre>
 </div>
@@ -16862,7 +16871,8 @@ Main Topic Probability: 0.4948936919922155
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_topic_df</span> <span class="o">=</span> <span class="n">clean_df</span> \
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find the most common topics and their average probabilities</span>
+<span class="n">count_topic_df</span> <span class="o">=</span> <span class="n">clean_df</span> \
     <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'main_topic_str'</span><span class="p">)</span> \
     <span class="o">.</span><span class="n">count</span><span class="p">()[[</span><span class="s1">'_id'</span><span class="p">]]</span> \
     <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> \
@@ -17029,6 +17039,10 @@ Main Topic Probability: 0.4948936919922155
 <li>The New York Times puts all its articles behind a paywall and does not load the article's content unless its reader logs in.</li>
 <li>Not all New York Times articles are guaranteed to put their article content in the same HTML tag</li>
 </ol>
+<h3 id="Resources">Resources<a class="anchor-link" href="#Resources">&#182;</a></h3><ul>
+<li><a href="https://cloud.google.com/learn/what-is-natural-language-processing#:~:text=Natural%20language%20processing%20(NLP">What is Natural Language Processing?</a>%20uses,media%20sentiment%20and%20customer%20conversations.)</li>
+<li><a href="https://www.nltk.org/index.html">NLTK Docs</a></li>
+</ul>
 
 </div>
 </div>
@@ -17108,7 +17122,7 @@ Main Topic Probability: 0.4948936919922155
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>b&#39;&lt;html&gt;&lt;head&gt;&lt;title&gt;nytimes.com&lt;/title&gt;&lt;style&gt;#cmsg{animation: A 1.5s;}@keyframes A{0%{opacity:0;}99%{opacity:0;}100%{opacity:1;}}&lt;/style&gt;&lt;/head&gt;&lt;body style=&#34;margin:0&#34;&gt;&lt;p id=&#34;cmsg&#34;&gt;Please enable JS and disable any ad blocker&lt;/p&gt;&lt;script data-cfasync=&#34;false&#34;&gt;var dd={\&#39;rt\&#39;:\&#39;c\&#39;,\&#39;cid\&#39;:\&#39;AHrlqAAAAAMAcGLvna7pG_kAgQJZKA==\&#39;,\&#39;hsh\&#39;:\&#39;499AE34129FA4E4FABC31582C3075D\&#39;,\&#39;t\&#39;:\&#39;bv\&#39;,\&#39;s\&#39;:17439,\&#39;e\&#39;:\&#39;c8209292b6739f8291f763f39e69a0830b1a94626e45f65156658fefa26edf22\&#39;,\&#39;host\&#39;:\&#39;geo.captcha-delivery.com\&#39;}&lt;/script&gt;&lt;script data-cfasync=&#34;false&#34; src=&#34;https://ct.captcha-delivery.com/c.js&#34;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;\n&#39;</pre>
+<pre>b&#39;&lt;html&gt;&lt;head&gt;&lt;title&gt;nytimes.com&lt;/title&gt;&lt;style&gt;#cmsg{animation: A 1.5s;}@keyframes A{0%{opacity:0;}99%{opacity:0;}100%{opacity:1;}}&lt;/style&gt;&lt;/head&gt;&lt;body style=&#34;margin:0&#34;&gt;&lt;p id=&#34;cmsg&#34;&gt;Please enable JS and disable any ad blocker&lt;/p&gt;&lt;script data-cfasync=&#34;false&#34;&gt;var dd={\&#39;rt\&#39;:\&#39;c\&#39;,\&#39;cid\&#39;:\&#39;AHrlqAAAAAMA_3A3FDW8PzIAgQJZKA==\&#39;,\&#39;hsh\&#39;:\&#39;499AE34129FA4E4FABC31582C3075D\&#39;,\&#39;t\&#39;:\&#39;bv\&#39;,\&#39;s\&#39;:17439,\&#39;e\&#39;:\&#39;d5f4d7d98c6dc74e2a82b4b6d042a151d0e8c024a2e631045489e90b47bd75b1\&#39;,\&#39;host\&#39;:\&#39;geo.captcha-delivery.com\&#39;}&lt;/script&gt;&lt;script data-cfasync=&#34;false&#34; src=&#34;https://ct.captcha-delivery.com/c.js&#34;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;\n&#39;</pre>
 </div>
 
 </div>
@@ -17392,6 +17406,7 @@ Main Topic Probability: 0.4948936919922155
 <li>The most common topics for NYT articles with the keyword SPAC are all heavily business and finace related.</li>
 <li>The high amount positive sentiment in New York Times articles with the keyword SPAC</li>
 </ul>
+<p><iframe src="https://giphy.com/embed/lD76yTC5zxZPG" width="480" height="352" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-end-thats-all-folks-lD76yTC5zxZPG">via GIPHY</a></p></p>
 
 </div>
 </div>
